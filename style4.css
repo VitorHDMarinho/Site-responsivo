@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0px;
+}
+
+body {
+    background-image: url(img/background2.jpg);
+    background-size: cover;
+    height: 100%;
+}
+
+.topo {
+    display: flex;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 8vh;
+    align-items: center;
+}
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover {
+    opacity: 0.7;
+    border-bottom: 3px solid white;
+}
+
+.logo {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile_menu div {
+    height: 2px;
+    width: 32px;
+    background: #fff;
+    margin: 8px;
+}
+
+.mobile_menu {
+    cursor: pointer;
+    display: none;
+}
+.menu-icon{
+    display:none;
+}
+#menu_toogle{
+    display:none;
+}
+main{
+    height: 100%;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    padding: 10px;
+}
+.contatos{
+    background-color:rgb(205, 134, 219);
+    height: 100%;
+    width: 82%;
+    border-radius: 10px;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin-top: 5vh;
+    text-align: center;
+    color:white;
+    font-size: 18px;
+}
+.texto-contatos{
+    letter-spacing: 2px;
+    margin-top: 10px;
+    padding: 20px;
+}
+.titulo-textos{
+    margin-top:2vh;
+}
+
+@media (max-width:999px){
+    body{
+        background-repeat: no-repeat;
+    }
+    nav ul{
+        position:absolute;
+        top:8vh;
+        right:0;
+        width: 50vw;
+        height: 92vh;
+        background-color: rgb(205, 134, 219);
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+        border-radius: 10px;
+        display:none;
+    }
+    nav ul li{
+        margin-left: 0;
+    }
+    .menu-icon{
+        display:block;
+        color: white;
+        font-size:25px;
+    }
+    #menu_toogle:checked ~ ul{
+        display: flex;
+    }
+    main{
+        height: 80%;
+    }
+}

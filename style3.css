@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing:border-box;
+    border: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-image: url(img/background2.jpg);
+    background-size: cover;
+    height: 100%;
+}
+.titulo_principal{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 3px;
+    margin-top: 3vh;
+    margin-bottom:3vh;
+}
+.sobre{
+    text-align: center;
+}
+img{
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.borda{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.texto{
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgb(205, 134, 219);
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.historia{
+    color: rgb(253, 253, 253);
+    text-align: center;
+    max-width: 800px;
+    align-items: center;
+    font-size: 24px;
+    padding:20px;
+    margin-top: 20px;
+}
+.topo{
+    display:flex ;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 8vh;
+    align-items: center;
+}
+a{
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+a:hover{
+    opacity: 0.7;
+    border-bottom: 3px solid white;
+}
+.logo{
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+nav ul{
+    list-style: none;
+    display:flex;
+}
+nav ul li{
+    letter-spacing: 3px;
+    margin-left:32px ;
+}
+.mobile_menu div{
+    height: 2px;
+    width: 32px;
+    background: #fff;
+    margin:8px;
+}
+.mobile_menu{
+    cursor:pointer;
+    display:none;
+}
+.menu-icon{
+    display:none;
+}
+#menu_toogle{
+    display: none;
+}
+
+@media (max-width:999px){
+    body{
+        background-repeat: no-repeat;
+    }
+    nav ul{
+        position:absolute;
+        top:8vh;
+        right:0;
+        width: 50vw;
+        height: 92vh;
+        background-color: rgb(205, 134, 219);
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+        border-radius: 10px;
+        display:none;
+    }
+    nav ul li{
+        margin-left: 0;
+    }
+    .menu-icon{
+        display:block;
+        color: white;
+        font-size:25px;
+    }
+    #menu_toogle:checked ~ ul{
+        display: flex;
+    }
+    @media (max-width:700px){
+    img{
+        width: 350px;
+    }
+}
+}
